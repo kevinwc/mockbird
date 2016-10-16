@@ -1,5 +1,9 @@
 <div class="jumbotron text-center">
-<button class="btn btn-primary" ng-click="vm.getData()">Give me list!</button>
+    <ul class="list-group">
+        <button class="btn btn-primary" ng-click="vm.getBreakfastList()">Breakfast!</button>
+        <button class="btn btn-primary" ng-click="vm.getLunchList()">Lunch!</button>
+        <button class="btn btn-primary" ng-click="vm.getDinnerList()">Dinner!</button>
+    </ul>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="item in vm.list">{{item}}</li>
     </ul>

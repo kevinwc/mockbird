@@ -1,11 +1,21 @@
 angular.module('DataService', []).factory('DataService', ['$http',
     function($http) {
         return {
-            'getListofRestaurants': getListofRestaurants
+            'getBreakfastRestaurants': getBreakfastRestaurants,
+            'getLunchRestaurants': getLunchRestaurants,
+            'getDinnerRestaurants': getDinnerRestaurants
         };
 
-        function getListofRestaurants(queryData) {
-            return ['Mcdonalds', 'Burger King', 'Wendys', 'Taco Bell', 'Coastal Flats', 'Panda Express', 'PF Changs', 'Del Taaco', 'Five Guys'];
+        function getBreakfastRestaurants(queryData) {
+            return ['Mcdonalds', 'Burger King'];
+        }
+
+        function getLunchRestaurants(queryData) {
+            return ['Wendys', 'Taco Bell', 'Del Taaco', 'Five Guys'];
+        }
+
+        function getDinnerRestaurants(queryData) {
+            return ['Coastal Flats', 'PF Changs'];
         }
     }
 ]);
